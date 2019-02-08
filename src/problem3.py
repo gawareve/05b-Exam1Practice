@@ -240,7 +240,18 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # -------------------------------------------------------------------------
+    window=rg.RoseWindow(400,650)
+    n=3
+    thickness=0
+    for k in range (m):
 
+        problem3a(window,point1,n)
+        thickness=thickness+problem3a(window,point1,n)
+        n=n+2
+        point1=rg.Point(point1.x,point1.y+60)
+
+    window.close_on_mouse_click()
+    return thickness
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
