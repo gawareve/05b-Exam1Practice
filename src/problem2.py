@@ -31,7 +31,7 @@ import rosegraphics as rg
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_problem2a()
+   # run_test_problem2a()
     run_test_problem2b()
 
 
@@ -197,10 +197,10 @@ def problem2b(rect, n, delta, win):
     # -------------------------------------------------------------------------
     rect.attach_to(win)
     for k in range(n):
-        point1x=rect.get_lower_left_corner().x-k*(rect.get_width())/2
-        point1y=rect.get_lower_left_corner().y+k*(rect.get_height())/2
-        point2x = rect.get_upper_right_corner().x + k * (rect.get_width()) / 2
-        point2y=rect.get_upper_right_corner().y-k*(rect.get_height())/2
+        point1x=rect.get_lower_left_corner().x-k*2*delta/2
+        point1y=rect.get_lower_left_corner().y+k*2*delta/2
+        point2x = rect.get_upper_right_corner().x + k * 2*delta/ 2
+        point2y=rect.get_upper_right_corner().y-k*2*delta/2
         rect2 = rg.Rectangle(rg.Point(point1x, point1y), rg.Point(point2x, point2y))
         rect2.attach_to(win)
     win.render()
